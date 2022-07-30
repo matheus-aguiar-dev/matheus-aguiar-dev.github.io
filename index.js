@@ -1,11 +1,11 @@
 let i = 0;
 let textPosition = 0;
 const txt = [
-  "I'm a FullStack Developer",
-  "Machine Learning Enthusiast",
-  "I Love Scripting and Automation",
+  "Sou um Desenvolvedor FullStack",
+  "Machine Learning Entusiasta",
+  "Amo Scripts e Automação",
 ]; /* The text */
-let speed = 110; /* The speed/duration of the effect in milliseconds */
+let speed = 90; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
   if (i < txt[textPosition].length) {
