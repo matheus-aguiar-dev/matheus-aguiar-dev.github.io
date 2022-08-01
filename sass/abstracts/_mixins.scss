@@ -32,6 +32,20 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
+@mixin primary{
+    color: $color-primary;
+}
+@mixin inline{
+    display: inline;
+}
+@mixin fading{
+    @keyframes fading{
+        0%   {opacity: 0;}
+       
+        100% {opacity: 1;}    
+    }
+    animation: fading 1s infinite;
+}
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
         @media only screen and (max-width: 37.5em) { @content };    //600px
