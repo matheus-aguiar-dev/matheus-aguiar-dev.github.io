@@ -35,6 +35,13 @@ ORDER: Base + typography > general layout + grid > page layout > components
 @mixin primary{
     color: $color-primary;
 }
+@mixin primary-hover{
+    &:hover{
+        color: $color-primary;
+        animation: top-to-bottom .8s linear;
+        cursor: pointer;
+    } 
+}
 @mixin primary-light{
     color:$color-primary-light
 }
@@ -42,6 +49,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
     color: $color-primary-dark;
 
 }
+
 @mixin inline{
     display: inline;
 }

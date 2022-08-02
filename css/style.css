@@ -29,6 +29,30 @@ ORDER: Base + typography > general layout + grid > page layout > components
   100% {
     opacity: 1; } }
 
+@keyframes top-to-bottom {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-3px); }
+  75% {
+    transform: translateY(0); }
+  90% {
+    transform: translateY(-3px); }
+  0% {
+    transform: translateY(0); } }
+
+@keyframes top-to-bottom-right-bar {
+  0% {
+    transform: translateY(0) rotate(-90deg); }
+  50% {
+    transform: translateY(-3px) rotate(-90deg); }
+  75% {
+    transform: translateY(0) rotate(-90deg); }
+  90% {
+    transform: translateY(-3px) rotate(-90deg); }
+  0% {
+    transform: translateY(0) rotate(-90deg); } }
+
 .warning {
   color: red;
   width: 100%;
@@ -103,6 +127,11 @@ body {
 .primary {
   color: #14FFEC; }
 
+.primary-hover:hover {
+  color: #14FFEC;
+  animation: top-to-bottom .8s linear;
+  cursor: pointer; }
+
 .primary-dark {
   color: #8892B0; }
 
@@ -160,6 +189,7 @@ nav {
 
 .right-bar {
   position: fixed;
+  font-family: monospace;
   right: 0;
   width: 100px;
   height: 100vh;
@@ -168,6 +198,9 @@ nav {
   letter-spacing: 3px; }
   .right-bar p {
     transform: rotate(-90deg); }
+    .right-bar p:hover {
+      animation: top-to-bottom-right-bar .8s linear;
+      color: #14FFEC; }
     .right-bar p::after {
       content: '';
       width: 400px;
@@ -180,7 +213,7 @@ nav {
 
 .main {
   margin: 50px 100px 200px 100px;
-  font-family: "Calibre", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  font-family: monospace;
   font-weight: 100; }
   .main .greetings {
     display: flex;
@@ -222,12 +255,30 @@ nav {
     .main .about-inner-text {
       width: 45%; }
     .main .about-inner-image {
-      width: 35%; }
+      width: 35%;
+      position: relative; }
     .main .about-inner-image img {
       width: 100%;
       height: 100%;
-      max-width: 280px;
-      max-height: 350px; }
+      max-width: 250px;
+      max-height: 300px;
+      filter: grayscale(100%); }
+      .main .about-inner-image img:hover {
+        filter: grayscale(0%);
+        animation: fading 1s linear;
+        cursor: pointer; }
+        .main .about-inner-image img:hover + .about-inner-image-border {
+          top: 15px;
+          left: 15px; }
+    .main .about-inner-image-border {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: -1;
+      min-width: 250px;
+      min-height: 300px;
+      border: solid #14FFEC;
+      transition: all 0.25s; }
 
 @media only screen and (max-width: 1250px) {
   .main {
@@ -251,4 +302,14 @@ nav {
     margin: 20px 0; }
   .about img {
     margin: 0 auto;
-    display: block; } }
+    display: block; }
+  .about-inner-image-border {
+    left: 27vw !important; } }
+
+@media only screen and (max-width: 500px) {
+  .about-inner-image-border {
+    left: 19vw !important; } }
+
+@media only screen and (max-width: 400px) {
+  .about-inner-image-border {
+    left: 12vw !important; } }

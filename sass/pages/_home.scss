@@ -1,6 +1,9 @@
 .primary{
   @include primary;
 }
+.primary-hover{
+  @include primary-hover;
+}
 .primary-dark{
   @include primary-dark;
 }
@@ -67,14 +70,21 @@ nav {
     }
   .right-bar {
     position: fixed;
+    font-family:  monospace;  
     right: 0;
     width: 100px;
     height: 100vh;
     background-color: $color-background;
     padding-top: 50vh;
     letter-spacing: 3px;
+    
     p{
       transform: rotate(-90deg);
+      &:hover{
+        animation: top-to-bottom-right-bar .8s linear;
+        color: $color-primary;
+
+      }
        &::after{
         content: '';
         width: 400px;
@@ -92,7 +102,7 @@ nav {
   
   .main {
     margin: 50px 100px 200px 100px;
-    font-family: "Calibre", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+    font-family:  monospace;  
     font-weight: 100;
       
     .greetings {
@@ -155,14 +165,38 @@ nav {
       }
       &-inner-image {
         width: 35%;
+        position: relative;
+
       }
       &-inner-image{
         img{
           width: 100%;
           height: 100%;
-          max-width: 280px;
-          max-height: 350px;
+          max-width: 250px;
+          max-height: 300px;
+          filter: grayscale(100%);
+          &:hover {
+            filter: grayscale(0%);
+            animation: fading 1s linear;
+            cursor: pointer;
+            & + .about-inner-image-border{
+              top: 15px;
+              left: 15px;
+            }
+          }
         }
+        &-border{
+            position:absolute;
+            top: 10px;
+            left: 10px;
+            z-index: -1;
+            min-width: 250px;
+            min-height: 300px;
+            border: solid #14FFEC;
+            transition: all 0.25s;
+    
+         }
+        
       }
     }
 
@@ -207,5 +241,23 @@ nav {
       margin: 0 auto;
       display: block;
     }
+    &-inner-image-border{
+      left: 27vw !important;
+    }
   }
+}
+@media only screen and (max-width: 500px) {
+  .about-inner-image-border{
+      left: 19vw !important;
+
+   }
+
+}
+@media only screen and (max-width: 400px) {
+  .about-inner-image-border{
+      left: 12vw !important;
+     
+
+   }
+
 }
