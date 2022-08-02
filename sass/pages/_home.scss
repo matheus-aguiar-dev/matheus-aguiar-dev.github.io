@@ -1,12 +1,19 @@
 .primary{
   @include primary;
 }
+.primary-dark{
+  @include primary-dark;
+}
+.primary-light{
+  @include primary-light;
+}
 .inline{
   @include inline;
 }
 .fading{
   @include fading;
 }
+
 nav {
     margin: 30px 100px;
     display: block;
@@ -19,12 +26,14 @@ nav {
       left: .2rem;
       top: 0;
     }
+    .right-nav-list{
+      font-family:  monospace;  
+    }
     ul {
       float: right;
        li {
         display: inline-block;
         padding: 3px 4px;
-        color: white; 
       }     
     }
 
@@ -36,7 +45,7 @@ nav {
     left: 0;
     width: 100px;
     height: 100vh;
-    background-color: black;
+    background-color: $color-background;
     z-index: -1; 
     &-social {
       display: flex;
@@ -49,28 +58,30 @@ nav {
         content: '';
       width: 2px;
       margin: 4px 0 0 14px;
-      height: 100px;
+      height: 200px;
       display: inline-block;
-      background-color: blue; }
-      
+      background-color: $color-primary-light }
+     
     }
-  .right-Bar {
+  .right-bar {
     position: fixed;
     right: 0;
     width: 100px;
     height: 100vh;
-    background-color: black;
+    background-color: $color-background;
     z-index: -1; 
-    padding-top: 30vh;
+    padding-top: 50vh;
     p{
-      
-      transform: rotate(90deg);
-
-      &::after{
+      transform: rotate(-90deg);
+       &::after{
         content: '';
-        width: 2px;
-        height: 100px;
-        background-color: blue; 
+        width: 400px;
+        height: 2px;
+        position:absolute;
+        bottom: 10px;
+        margin-left: -420px;
+        display: block;
+        background-color: $color-primary-light;
       }
     }
      
@@ -79,35 +90,40 @@ nav {
   
   .main {
     margin: 50px 100px 200px 100px;
-    padding: 0 0 0 5%; 
+    font-family: "Calibre", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+    font-weight: 100;
       
     .greetings {
       display: flex;
       flex-wrap: wrap;
       &-text {
         margin: 5% 0 0 0;
-        
+        text-align:center;
       }
       &-image, &-text {
         width: 50%; 
-        margin: 0 auto;
       }
-      &-image{
-        min-width: 490px;
+      &-img{
+        min-width: 350px;
       }
       &-img {
-        min-width: 400px;
         max-width: 700px;
         max-height: 500px;
         height: 100%;
         width: 100%; 
       }
       .text-writer{
-        font-size:50px;
+        font-size:30px;
         font-weight: 900;
       }
-    }
       
+    }
+    .testepica{
+      display: inline-block;
+
+      animation: rotation 0.6s linear infinite;
+    }
+   
     .heading {
       font-size: 2rem; 
     }
@@ -144,5 +160,37 @@ nav {
         }
       }
     }
-  
+
   }
+  @media only screen and (max-width: 1250px) {
+    .main{
+      margin: 50px 5vw 200px 5vw;
+
+    }
+    .left-bar, .right-bar{
+      @include disable-view;
+    }
+    .greetings {
+      .heading{
+
+        font-size: 1.7rem;
+      }
+     
+      &-image{
+        min-width: 280px !important ;
+      }
+    }
+  }
+@media only screen and (max-width: 780px) {
+  .greetings {
+
+    &-image, &-text {
+      width: 100% !important; 
+      margin: 30px 0;
+      text-align: center;
+    }
+    &-img{
+      max-width: 400px !important;
+    }
+  }
+}

@@ -5,7 +5,7 @@ const txt = [
   "Machine Learning Entusiasta",
   "Amo Scripts e Automação",
 ]; /* The text */
-let speed = 90; /* The speed/duration of the effect in milliseconds */
+let speed = 120; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
   if (i < txt[textPosition].length) {

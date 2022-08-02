@@ -35,16 +35,22 @@ ORDER: Base + typography > general layout + grid > page layout > components
 @mixin primary{
     color: $color-primary;
 }
+@mixin primary-light{
+    color:$color-primary-light
+}
+@mixin primary-dark{
+    color: $color-primary-dark;
+
+}
 @mixin inline{
     display: inline;
 }
 @mixin fading{
-    @keyframes fading{
-        0%   {opacity: 0;}
-       
-        100% {opacity: 1;}    
-    }
-    animation: fading 1s infinite;
+    animation: fading .9s infinite;
+}
+
+@mixin disable-view{
+    display: none;
 }
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
