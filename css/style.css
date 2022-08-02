@@ -115,6 +115,9 @@ body {
 .fading {
   animation: fading .9s infinite; }
 
+li::marker {
+  display: none; }
+
 nav {
   margin: 30px 100px;
   display: block;
@@ -137,9 +140,9 @@ nav {
   position: fixed;
   left: 0;
   width: 100px;
-  height: 100vh;
-  background-color: #0A192F;
-  z-index: -1; }
+  margin-top: 30px;
+  height: 90vh;
+  background-color: #0A192F; }
   .left-bar-social {
     display: flex;
     flex-direction: column;
@@ -161,8 +164,8 @@ nav {
   width: 100px;
   height: 100vh;
   background-color: #0A192F;
-  z-index: -1;
-  padding-top: 50vh; }
+  padding-top: 50vh;
+  letter-spacing: 3px; }
   .right-bar p {
     transform: rotate(-90deg); }
     .right-bar p::after {
@@ -181,7 +184,8 @@ nav {
   font-weight: 100; }
   .main .greetings {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    margin-bottom: 240px; }
     .main .greetings-text {
       margin: 5% 0 0 0;
       text-align: center; }
@@ -197,32 +201,33 @@ nav {
     .main .greetings .text-writer {
       font-size: 30px;
       font-weight: 900; }
-  .main .testepica {
+  .main .emote-rotate {
     display: inline-block;
     animation: rotation 0.6s linear infinite; }
   .main .heading {
     font-size: 2rem; }
-  .main .about-text::after {
-    content: '';
-    width: 200px;
-    height: 3px;
-    margin: 0 0 6px 6px;
-    display: inline-block;
-    background-color: blue; }
-  .main .about-inner {
-    display: flex;
-    justify-content: space-between;
-    gap: 250px; }
-  .main .about-inner-text {
-    width: 50%;
-    min-width: 450px; }
-  .main .about-inner-image {
-    width: 60%; }
-  .main .about-inner-image img {
-    width: 100%;
-    height: 100%;
-    max-width: 280px;
-    max-height: 350px; }
+  .main .about {
+    margin-left: 5%; }
+    .main .about-text::after {
+      content: '';
+      width: 200px;
+      height: 3px;
+      margin: 0 0 6px 6px;
+      display: inline-block;
+      background-color: #CCD6F6; }
+    .main .about-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+    .main .about-inner-text {
+      width: 45%; }
+    .main .about-inner-image {
+      width: 35%; }
+    .main .about-inner-image img {
+      width: 100%;
+      height: 100%;
+      max-width: 280px;
+      max-height: 350px; }
 
 @media only screen and (max-width: 1250px) {
   .main {
@@ -240,4 +245,10 @@ nav {
     margin: 30px 0;
     text-align: center; }
   .greetings-img {
-    max-width: 400px !important; } }
+    max-width: 400px !important; }
+  .about-inner-text, .about-inner-image {
+    width: 100% !important;
+    margin: 20px 0; }
+  .about img {
+    margin: 0 auto;
+    display: block; } }
