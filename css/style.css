@@ -218,6 +218,7 @@ nav {
     flex-wrap: wrap;
     margin-bottom: 240px; }
     .main .greetings-text {
+      margin-top: 7%;
       text-align: center; }
     .main .greetings-image, .main .greetings-text {
       width: 50%; }
@@ -237,45 +238,52 @@ nav {
   .main .heading {
     font-size: 2rem; }
   .main .about {
-    margin-left: 10vw; }
-    .main .about-text::after {
-      content: '';
-      width: 30%;
-      height: 2px;
-      margin: 0 0 6px 6px;
-      display: inline-block;
-      background-color: #CCD6F6; }
+    width: 100vw -200px;
+    display: block; }
     .main .about-inner {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between; }
-    .main .about-inner-text {
-      width: 40%; }
+      flex-wrap: wrap; }
+      .main .about-inner-column {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        position: relative; }
+        .main .about-inner-column-title::after {
+          content: '';
+          width: 40%;
+          overflow: hidden;
+          height: 2px;
+          margin: 0 0 6px 6px;
+          display: inline-block;
+          background-color: #CCD6F6; }
     .main .about-inner-image {
       width: 40%;
       position: relative; }
-    .main .about-inner-image img {
-      width: 100%;
-      height: 100%;
-      max-width: 250px;
-      max-height: 300px;
-      filter: grayscale(100%); }
-      .main .about-inner-image img:hover {
-        filter: grayscale(0%);
-        animation: fading 1s linear;
-        cursor: pointer; }
-        .main .about-inner-image img:hover + .about-inner-image-border {
-          top: 15px;
-          left: 15px; }
-    .main .about-inner-image-border {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      z-index: -1;
-      min-width: 250px;
-      min-height: 300px;
-      border: solid #14FFEC;
-      transition: all 0.25s; }
+    .main .about-inner-image {
+      display: block; }
+      .main .about-inner-image img {
+        width: 100%;
+        height: 100%;
+        max-width: 250px;
+        max-height: 300px;
+        filter: grayscale(100%); }
+        .main .about-inner-image img:hover {
+          filter: grayscale(0%);
+          animation: fading 1s linear;
+          cursor: pointer; }
+          .main .about-inner-image img:hover + .about-inner-image-border {
+            top: 15px;
+            left: 15px; }
+      .main .about-inner-image-border {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: -1;
+        min-width: 250px;
+        min-height: 300px;
+        border: solid #14FFEC;
+        transition: all 0.25s; }
 
 @media only screen and (max-width: 1150px) {
   .main {
