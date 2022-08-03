@@ -52,7 +52,7 @@ nav {
     width: 100px;
     margin-top: 30px;
     height: 90vh;
-    background-color: $color-background;
+    
     &-social {
       display: flex;
       flex-direction: column;
@@ -71,10 +71,10 @@ nav {
   .right-bar {
     position: fixed;
     font-family:  monospace;  
+    font-size: 1.2rem;
     right: 0;
     width: 100px;
     height: 100vh;
-    background-color: $color-background;
     padding-top: 50vh;
     letter-spacing: 3px;
     
@@ -110,7 +110,7 @@ nav {
       flex-wrap: wrap;
       margin-bottom: 240px;
       &-text {
-        margin: 5% 0 0 0;
+       
         text-align:center;
       }
       &-image, &-text {
@@ -142,11 +142,11 @@ nav {
     }
     
     .about{
-      margin-left: 5%;
+      margin-left: 10vw;
       &-text::after {
         content: '';
-        width: 200px;
-        height: 3px;
+        width: 30%;
+        height: 2px;
         margin: 0 0 6px 6px;
         display: inline-block;  
         background-color: $color-primary-light; 
@@ -160,11 +160,11 @@ nav {
     
      
       &-inner-text{
-        width: 45%;
+        width: 40%;
 
       }
       &-inner-image {
-        width: 35%;
+        width: 40%;
         position: relative;
 
       }
@@ -192,7 +192,7 @@ nav {
             z-index: -1;
             min-width: 250px;
             min-height: 300px;
-            border: solid #14FFEC;
+            border: solid $color-primary;
             transition: all 0.25s;
     
          }
@@ -201,7 +201,7 @@ nav {
     }
 
   }
-  @media only screen and (max-width: 1250px) {
+  @media only screen and (max-width: 1150px) {
     .main{
       margin: 50px 5vw 200px 5vw;
 
@@ -219,6 +219,9 @@ nav {
         min-width: 280px !important ;
       }
     }
+    .about{
+      margin-left: 8vw !important;
+    }
   }
 @media only screen and (max-width: 780px) {
   .greetings {
@@ -233,6 +236,8 @@ nav {
     }
   }
   .about{
+    margin: 0vw !important;
+
     &-inner-text, &-inner-image{
       width: 100% !important;
       margin: 20px 0;
@@ -242,22 +247,29 @@ nav {
       display: block;
     }
     &-inner-image-border{
-      left: 27vw !important;
+      left: 30vw !important;
     }
   }
 }
 @media only screen and (max-width: 500px) {
   .about-inner-image-border{
-      left: 19vw !important;
+      left: 22vw !important;
 
    }
 
 }
 @media only screen and (max-width: 400px) {
   .about-inner-image-border{
-      left: 12vw !important;
-     
-
+      left: 16vw !important;
    }
 
+}
+@media only screen and (max-width: 350px) {
+  .about-img, .greetings-img, .greetings-image{
+    min-width: 100% !important;
+   }
+   
+   .about-inner-image-border{
+    left: 10vw !important;
+ }
 }
