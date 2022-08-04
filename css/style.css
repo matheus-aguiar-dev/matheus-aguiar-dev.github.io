@@ -219,7 +219,8 @@ nav {
     margin-bottom: 240px; }
     .main .greetings-text {
       margin-top: 7%;
-      text-align: center; }
+      text-align: center;
+      max-height: 170px; }
     .main .greetings-image, .main .greetings-text {
       width: 50%; }
     .main .greetings-img {
@@ -239,7 +240,8 @@ nav {
     font-size: 2rem; }
   .main .about {
     width: 100vw -200px;
-    display: block; }
+    display: block;
+    margin: 0 5%; }
     .main .about-inner {
       display: flex;
       flex-wrap: wrap; }
@@ -290,6 +292,8 @@ nav {
       transition: all 0.25s; }
 
 @media only screen and (max-width: 1150px) {
+  .about {
+    margin: 0; }
   .main {
     margin: 50px 5vw 200px 5vw; }
   .left-bar, .right-bar {
@@ -301,7 +305,7 @@ nav {
   .about {
     margin-left: 8vw !important; }
     .about-inner-column {
-      width: 60%; } }
+      width: 60% !important; } }
 
 @media only screen and (max-width: 780px) {
   .greetings-image, .greetings-text {
@@ -312,7 +316,9 @@ nav {
     max-width: 400px !important; }
   .about {
     margin: 0vw !important; }
-    .about-inner-text, .about-inner-image {
+    .about-inner-column-text {
+      margin: 0 60px !important; }
+    .about-inner-column, .about-inner-image {
       width: 100% !important;
       margin: 20px 0; }
     .about img {
@@ -323,7 +329,9 @@ nav {
 
 @media only screen and (max-width: 500px) {
   .about-inner-image-border {
-    left: 22vw !important; } }
+    left: 22vw !important; }
+  .about-inner-column-text {
+    margin: 0 10px !important; } }
 
 @media only screen and (max-width: 400px) {
   .about-inner-image-border {

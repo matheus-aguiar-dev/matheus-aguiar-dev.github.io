@@ -44,8 +44,6 @@ nav {
     }
 
 }
-
-  
   .left-bar {
     position: fixed;
     left: 0;
@@ -112,6 +110,7 @@ nav {
       &-text {
         margin-top: 7%;
         text-align:center;
+        max-height: 170px;
       }
       &-image, &-text {
         width: 50%; 
@@ -144,6 +143,7 @@ nav {
     .about{
       width: 100vw -200px;
       display: block;
+      margin: 0 5%;
       &-inner {
         display: flex; 
         flex-wrap: wrap;
@@ -211,6 +211,9 @@ nav {
 
   }
   @media only screen and (max-width: 1150px) {
+    .about{
+      margin: 0;
+    }
     .main{
       margin: 50px 5vw 200px 5vw;
 
@@ -231,7 +234,7 @@ nav {
     .about{
       margin-left: 8vw !important;
       &-inner-column {
-        width: 60%;
+        width: 60% !important;
       }
     }
   }
@@ -250,7 +253,10 @@ nav {
   .about{
     margin: 0vw !important;
 
-    &-inner-text, &-inner-image{
+    &-inner-column-text{
+      margin: 0 60px !important;
+    }
+    &-inner-column, &-inner-image{
       width: 100% !important;
       margin: 20px 0;
     }
@@ -266,8 +272,10 @@ nav {
 @media only screen and (max-width: 500px) {
   .about-inner-image-border{
       left: 22vw !important;
-
    }
+   .about-inner-column-text{
+    margin: 0 10px !important;
+  }
 
 }
 @media only screen and (max-width: 400px) {
