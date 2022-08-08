@@ -204,6 +204,13 @@ nav {
     }
     .skills{
       text-align: center;
+      &-container{
+        margin: 10px 0;
+        line-height: 30px;
+        padding: 10px 10px;
+        border-radius: 30px;
+        background-color: rgba(20, 255, 236,0.3)
+      }
     }
   }
   @media only screen and (max-width: 1150px) {
