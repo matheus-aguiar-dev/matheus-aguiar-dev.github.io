@@ -141,79 +141,73 @@ nav {
     }
     
     .about{
-      width: 100vw -200px;
-      display: block;
-      margin: 0 5%;
-      &-inner {
-        display: flex; 
+      &-inner{
+        display: flex;
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;       
+        margin-bottom: 240px;
         &-column{
+          width:  35%;
           margin: 0 auto;
-          display: flex;
-          flex-direction: column;
-          width: 45%;
           position: relative;
           &-title::after{
             content: '';
             position: absolute;
+            width: 70%;
             top: 44px;
-            width: 65%;
-            overflow: hidden;
             height: 2px;
             margin: 0 0 6px 6px;
             display: inline-block;  
             background-color: $color-primary-light; 
           }
           &-text{
-            margin: 0 30px;
+            margin: 0 0 0 10%;
+            position: relative;
+           
           }
         }
-      }     
-      
-      &-inner-image {
-        width: 40%;
-        position: relative;
-        display: block;
-        margin: 90px 0;
-      }
-      &-inner-image{
-        img{
-          
-          width: 100%;
-          height: 100%;
-          max-width: 250px;
-          max-height: 300px;
-          filter: grayscale(100%);
-          &:hover {
-            filter: grayscale(0%);
-            animation: fading 1s linear;
-            cursor: pointer;
-            & + .about-inner-image-border{
-              top: 15px;
-              left: 15px;
+        &-image{
+          width: 25%;          
+          margin: 0 auto;
+          position: relative;
+          &-picture{
+            background-image: url('../../assets/eu.png');
+            min-width: 230px;
+            max-width: 230px;
+            height: 300px;
+            background-size: cover;
+            filter: grayscale(100%);
+            &:hover {
+              filter: grayscale(0%);
+              animation: fading 1s linear;
+              cursor: pointer;
+              & + .about-inner-image-border{
+                top: 20px;
+                left: 20px;
+              }
             }
           }
-        }
-        &-border{
+          &-border{
+            transition: all 1 ease;
             position:absolute;
-            top: 10px;
-            left: 10px;
+            top: 15px;
+            left: 15px;
             z-index: -1;
-            min-width: 250px;
+            min-width: 230px;
             min-height: 300px;
             border: solid $color-primary;
             transition: all 0.25s;
-    
-         }
-        
+          }
+        }
       }
     }
-
+    .skills{
+      text-align: center;
+    }
   }
   @media only screen and (max-width: 1150px) {
-    .about{
-      margin: 0;
-    }
+    
     .main{
       margin: 50px 5vw 200px 5vw;
 
@@ -231,12 +225,22 @@ nav {
         min-width: 280px !important ;
       }
     }
-    .about{
-      margin-left: 8vw !important;
-      &-inner-column {
-        width: 60% !important;
+  .about{
+    width: 70% !important;
+    display: block;
+    margin: 0 auto;
+    &-inner{
+      &-column,&-image{
+        margin: 0 auto !important;
+        width: 100% !important;
+      }
+      &-image{
+        display: block !important;
+        margin: 100px 300vw 0 300vw !important ;
       }
     }
+  }
+    
   }
 @media only screen and (max-width: 780px) {
   .greetings {
@@ -250,46 +254,18 @@ nav {
       max-width: 400px !important;
     }
   }
-  .about{
-    margin: 0vw !important;
-
-    &-inner-column-text{
-      margin: 0 60px !important;
-    }
-    &-inner-column, &-inner-image{
-      width: 100% !important;
-      margin: 20px 0;
-    }
-    img{
-      margin: 0 auto;
-      display: block;
-    }
-    &-inner-image-border{
-      left: 30vw !important;
-    }
-  }
+  
 }
 @media only screen and (max-width: 500px) {
-  .about-inner-image-border{
-      left: 22vw !important;
-   }
-   .about-inner-column-text{
-    margin: 0 10px !important;
-  }
+ 
 
 }
 @media only screen and (max-width: 400px) {
-  .about-inner-image-border{
-      left: 16vw !important;
-   }
+  
 
 }
 @media only screen and (max-width: 350px) {
-  .about-img, .greetings-img, .greetings-image{
-    min-width: 100% !important;
-   }
+  
    
-   .about-inner-image-border{
-    left: 10vw !important;
- }
+   
 }
