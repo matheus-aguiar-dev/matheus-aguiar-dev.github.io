@@ -7,6 +7,16 @@ const txt = [
 ]; /* The text */
 let speed = 120; /* The speed/duration of the effect in milliseconds */
 
+let menutoggle = document.querySelector(".toggle");
+let navitems = document.querySelector(".navigation-items");
+let main = document.querySelector(".main");
+
+menutoggle.onclick = function () {
+  menutoggle.classList.toggle("active");
+  navitems.classList.toggle("active");
+  main.classList.toggle("active");
+};
+
 function typeWriter() {
   if (i < txt[textPosition].length) {
     document.getElementById("typewriter").innerHTML +=
