@@ -1,15 +1,24 @@
 nav {
     padding: 15px 40px;
     height: 80px;
-    background-color: rgba(0,0,0,.5);
-   
+    background-color: rgba(0,0,0,1);
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 3;
+    transition: .5s ease;
     .iconify{
         position: absolute;
+        z-index: 4;
         width: 50px;
-        height: 60px;
+        height: 55px;
+        &:hover{
+          cursor: pointer;
+        }
     }
     .middle-nav-list{
       font-family:  monospace;
+      font-weight: bold;
       text-align: center;
       position: relative;
       
@@ -88,10 +97,12 @@ nav {
     top: 0;
     background-color: rgba(0,0,0,1);
     z-index: 2;
+    font-size: 1.5rem;
 
     .middle-nav-list{
       .navigation-items{
       display: none;
+      
       padding: 25vh 0;
       margin: 0;
       position: fixed;
@@ -99,10 +110,16 @@ nav {
       height: 100vh;
       left: 0;
       top: 0;
-      background-color: rgba(255,255,255, 0.1);
+      background-color: rgba(255,255,255, 0.05);
       li{
         display: block;
-        margin: 50px 0;
+        width: 300px;
+
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        border: solid 0.5px $color-primary;
+        border-radius: 30px;
+        background: black;
+        margin: 50px auto;
       }
       &.active{
         display: inline-block;

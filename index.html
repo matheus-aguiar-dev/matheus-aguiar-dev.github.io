@@ -13,14 +13,14 @@
 <body>
     <nav>
         <div class="left-nav-brand">
-            <span class="iconify" data-icon="logos:wmr" data-flip="horizontal"></span>
+            <span onclick="scrollToTop('#greetings')" class="iconify" data-icon="logos:wmr" data-flip="horizontal"></span>
         </div>
         <div class="middle-nav-list ">
             <ul class="navigation-items">
-                <li class="primary-light primary-hover"> <strong class="primary ">01.</strong>  Sobre</li>
-                <li class="primary-light primary-hover"><strong class="primary">02.</strong> Habilidades</li>
-                <li class="primary-light primary-hover"><strong class="primary">03.</strong> Projetos</li>
-                <li class="primary-light primary-hover"><strong class="primary">04.</strong> Contatos</li>
+                <li onclick="scrollToTop('#about')" class="primary-light primary-hover" > <strong class="primary ">01.</strong>  Sobre</li>
+                <li onclick="scrollToTop('#skills')" class="primary-light primary-hover" ><strong class="primary">02.</strong> Habilidades</li>
+                <li onclick="scrollToTop('#projects')" class="primary-light primary-hover"><strong class="primary">03.</strong> Projetos</li>
+                <li  class="primary-light primary-hover" ><strong class="primary">04.</strong> Contatos</li>
                 <button> Curriculo</button>
             </ul>
             <div class="right-nav-list" >
@@ -55,7 +55,7 @@
     <h1 class="warning ">*Em construção*</h1>
 
     <div class="main">
-        <div class="greetings primary-light ">     
+        <div class="greetings primary-light " id="greetings">     
             <div class="greetings-text">
                 <h1 class="heading">
                     Olá! 
@@ -69,13 +69,12 @@
                     <h1 class="heading primary inline" id="typewriter">
                     </h1>
                     <span class="primary fading text-writer">|</span>
-                    
             </div>
             <div class="greetings-image">
                 <img class='greetings-img' src="/assets/programming_dark.svg" alt="">
             </div>
         </div>
-        <div class="about">
+        <div class="about" id="about">
             <div class="about-inner">
                 <div class='about-inner-column'>
 
@@ -93,24 +92,60 @@
                 </div>
             </div> 
         </div>
-        <div class="skills">
+        <div class="skills" id="skills">
             <h1>
                 <strong class="primary">02.</strong> Habilidades
                 <div class="skills-container">
                     <div class="skills-container-main">
-                        <i class="devicon-javascript-plain colored"></i>
-                        <i class="devicon-typescript-plain colored"></i>
-                        <i class="devicon-vuejs-plain colored"></i>
-                        <i class="devicon-nuxtjs-plain colored"></i>
-                        <i class="devicon-html5-plain colored"></i>
-                        <i class="devicon-css3-plain colored"></i>
-                        <i class="devicon-sass-original colored"></i>
-                        <i class="devicon-python-plain colored"></i>
-                        <i class="devicon-php-plain colored"></i>
-                        <i class="devicon-mysql-plain"></i>
-                        <i class="devicon-express-original"></i>                             
+                        <i class="devicon-javascript-plain colored scale-hover "></i>
+                        <span>
+                        </span>
+                        <span>
+
+                            <i class="devicon-typescript-plain colored scale-hover"></i>
+                        </span>
+                        <span>
+                            
+                            <i class="devicon-vuejs-plain colored scale-hover"></i>
+                        </span>
+                        <span>
+                            
+                            <i class="devicon-nuxtjs-plain colored scale-hover"></i>
+                        </span>
+                        <span>
+                            
+                            <i class="devicon-html5-plain colored scale-hover"></i>
+                        </span>
+                        <span>
+                            
+                            <i class="devicon-css3-plain colored scale-hover"></i>
+                        </span>
+                        <span>
+                            
+                            <i class="devicon-sass-original colored scale-hover"></i>
+                        </span>
+                        <span>
+                            
+                            <i class="devicon-python-plain colored scale-hover"></i>
+                        </span>
+                        <span>
+                            
+                            <i class="devicon-php-plain colored scale-hover"></i>
+                        </span>
+                        <span>
+                            
+                            <i class="devicon-mysql-plain scale-hover"></i>
+                        </span>
+                        <span>
+                            <i class="devicon-express-original scale-hover"></i>                             
+                        </span>
                     </div>                  
                 </div>
+            </h1>
+        </div>
+        <div class="projects" id="projects">
+            <h1>                
+                 <strong class="primary">03.</strong> Projetos
             </h1>
         </div>                  
     </div>

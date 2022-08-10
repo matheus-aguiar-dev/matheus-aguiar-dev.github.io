@@ -4,6 +4,9 @@
 .primary-hover{
   @include primary-hover;
 }
+.scale-hover{
+  @include scale-hover;
+}
 .primary-dark{
   @include primary-dark;
 }
@@ -22,7 +25,7 @@
     left: 0;
     width: 100px;
     margin-top: 30px;
-    height: 90vh;
+    height: 100vh;
     
     &-social {
       display: flex;
@@ -46,12 +49,12 @@
   position: fixed;
   overflow: hidden;
   font-family:  monospace;  
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   right: 0;
   width: 100px;
   height: 100vh;
   padding-top: 50vh;
-  letter-spacing: 3px;
+  letter-spacing: 1.5px;
     
   p{
       transform: rotate(-90deg);
@@ -83,7 +86,7 @@
   .greetings {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 240px;
+    margin-bottom: $vertical-height;
     &-text {
       margin-top: 7%;
       text-align:center;
@@ -93,9 +96,10 @@
       width: 50%; 
     }
     &-img{
-      min-width: 350px;
+      min-width: 100%;
     }
     &-img {
+      margin-top: 20px;
       max-width: 700px;
       max-height: 500px;
       height: 100%;
@@ -123,7 +127,7 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;       
-      margin-bottom: 240px;
+      margin-bottom: $vertical-height;
       &-column{
         width:  35%;
         margin: 0 auto;
@@ -181,16 +185,22 @@
   }
   .skills{
     text-align: center;
+    margin-bottom: $vertical-height;
+    
     &-container{
       margin: 10px 0;
       line-height: 30px;
-      padding: 10px 10px;
+      padding: 20px 20px;
       border-radius: 30px;
-      background-color: rgba(20, 255, 236,0.3)
+      background-color: rgba(20, 255, 236,0.3);
     }
+  
   }
   &.active{
     filter: blur(5px);
+  }
+  .projects{
+    text-align-last: center;
   }
 }
   @media only screen and (max-width: 1150px) {
@@ -245,7 +255,11 @@
   
 }
 @media only screen and (max-width: 500px) {
- 
+  .about-inner-column-title::after{
+    
+    width: 40% !important;
+   
+  }
 
 }
 @media only screen and (max-width: 400px) {
