@@ -56,7 +56,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .warning {
   color: red;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  margin-top: 120px; }
 
 :root {
   --primary-color: #14FFEC;
@@ -132,7 +133,7 @@ nav {
   width: 100vw;
   top: 0;
   z-index: 3;
-  transition: .5s ease; }
+  transition: .5s ease-in; }
   nav .iconify {
     position: absolute;
     z-index: 4;
@@ -223,7 +224,8 @@ nav {
       nav .middle-nav-list .navigation-items.active {
         display: inline-block; }
     nav .middle-nav-list .right-nav-list {
-      right: 50px; }
+      right: 50px;
+      top: 12px; }
     nav .middle-nav-list .toggle {
       display: block !important; } }
 
@@ -381,15 +383,57 @@ nav {
     text-align: center;
     margin-bottom: 200px; }
     .main .skills-container {
-      margin: 10px 0;
-      line-height: 30px;
-      padding: 20px 20px;
-      border-radius: 30px;
-      background-color: rgba(20, 255, 236, 0.3); }
+      display: flex;
+      flex-wrap: wrap; }
+      .main .skills-container p {
+        margin: 0; }
+      .main .skills-container-devicons {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 30px 0;
+        padding-top: 30px;
+        width: 50%;
+        background-color: rgba(20, 255, 236, 0.3); }
+        .main .skills-container-devicons .devicons {
+          font-size: 3rem;
+          margin-bottom: 25px;
+          padding: 25px 3px; }
+          .main .skills-container-devicons .devicons .icon {
+            padding: 5px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 4px double #14FFEC;
+            border-radius: 10px;
+            margin: 10px 3px 0 3px; }
+            .main .skills-container-devicons .devicons .icon:hover {
+              color: var(--color);
+              transition: 0.5s;
+              transform: scale(1.2);
+              background-color: rgba(20, 255, 236, 0.2); }
+          .main .skills-container-devicons .devicons .icon-special:hover {
+            font-size: 4rem;
+            margin: -5px; }
+      .main .skills-container-text {
+        display: block;
+        position: relative;
+        margin: 30px 0;
+        font-size: 2.0rem;
+        width: 50%;
+        background-color: rgba(20, 255, 236, 0.1); }
+      .main .skills-container-center {
+        padding: 80px 0 40px 8px; }
+      .main .skills-container-context {
+        margin-top: 100px;
+        font-size: 1.5rem;
+        width: 100%; }
   .main.active {
     filter: blur(5px); }
   .main .projects {
     text-align-last: center; }
+    .main .projects-container {
+      display: flex;
+      flex-wrap: wrap; }
 
 @media only screen and (max-width: 1150px) {
   .main {
@@ -417,7 +461,11 @@ nav {
     margin: 30px 0;
     text-align: center; }
   .greetings-img {
-    max-width: 400px !important; } }
+    max-width: 400px !important; }
+  .skills-container-devicons, .skills-container-text {
+    width: 100% !important; }
+  .skills-container-center {
+    position: relative !important; } }
 
 @media only screen and (max-width: 500px) {
   .about-inner-column-title::after {

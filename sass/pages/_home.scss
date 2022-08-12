@@ -188,11 +188,59 @@
     margin-bottom: $vertical-height;
     
     &-container{
-      margin: 10px 0;
-      line-height: 30px;
-      padding: 20px 20px;
-      border-radius: 30px;
-      background-color: rgba(20, 255, 236,0.3);
+      display: flex;
+      flex-wrap: wrap;
+      p{
+        margin: 0;
+      }
+      &-devicons{
+        display: flex;
+        flex-direction: column;
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 30px 0;
+        padding-top: 30px;
+        width: 50%;
+        background-color: rgba(20, 255, 236,0.3);
+        .devicons{
+          font-size: 3rem;
+          margin-bottom: 25px;
+          padding: 25px 3px;
+          .icon{
+            padding: 5px;
+            background-color: rgba(0,0,0, 0.3);
+            border: 4px double $color-primary;
+            border-radius: 10px;
+            margin: 10px 3px 0 3px;
+            &:hover{
+              color: var(--color);
+              transition: 0.5s;
+              transform: scale(1.2);
+              background-color: rgba(20, 255, 236,0.2);
+            }
+          }
+          .icon-special:hover{
+            font-size: 4rem;
+            margin: -5px;
+          }
+        }
+      }
+      &-text{
+        display: block;
+        position: relative;
+        margin: 30px 0;
+        font-size: 2.0rem;
+        width: 50%;
+        background-color: rgba(20, 255, 236,0.1);
+      }
+      &-center{
+        padding: 80px 0 40px 8px;
+      }
+      &-context{
+        margin-top: 100px;
+        font-size: 1.5rem;
+        width: 100%;
+      }
     }
   
   }
@@ -201,6 +249,11 @@
   }
   .projects{
     text-align-last: center;
+    &-container{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
   }
 }
   @media only screen and (max-width: 1150px) {
@@ -250,6 +303,16 @@
     }
     &-img{
       max-width: 400px !important;
+    }
+  }
+  .skills{
+    &-container{
+      &-devicons, &-text{
+        width: 100% !important;
+      }
+      &-center{
+        position: relative !important;
+      }
     }
   }
   

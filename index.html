@@ -20,8 +20,7 @@
                 <li onclick="scrollToTop('#about')" class="primary-light primary-hover" > <strong class="primary ">01.</strong>  Sobre</li>
                 <li onclick="scrollToTop('#skills')" class="primary-light primary-hover" ><strong class="primary">02.</strong> Habilidades</li>
                 <li onclick="scrollToTop('#projects')" class="primary-light primary-hover"><strong class="primary">03.</strong> Projetos</li>
-                <li  class="primary-light primary-hover" ><strong class="primary">04.</strong> Contatos</li>
-                <button> Curriculo</button>
+                <li  class="primary-light primary-hover" ><strong class="primary">04.</strong> Contato</li>
             </ul>
             <div class="right-nav-list" >
                 <i class="fa-solid fa-language primary-hover"></i>
@@ -55,6 +54,7 @@
     <h1 class="warning ">*Em construção*</h1>
 
     <div class="main">
+       
         <div class="greetings primary-light " id="greetings">     
             <div class="greetings-text">
                 <h1 class="heading">
@@ -68,7 +68,8 @@
                 </h1>
                     <h1 class="heading primary inline" id="typewriter">
                     </h1>
-                    <span class="primary fading text-writer">|</span>
+                    <span class="primary fading text-writer">|<br></span>
+                    
             </div>
             <div class="greetings-image">
                 <img class='greetings-img' src="/assets/programming_dark.svg" alt="">
@@ -87,68 +88,80 @@
                     
                 </div>
                 <div class="about-inner-image">
-                    <div class="about-inner-image-picture"></div>
-                    <div class='about-inner-image-border'></div>
-                </div>
+                        <a href="https://github.com/matheus-aguiar-dev">
+                            <div class="about-inner-image-picture"></div>
+                            <div class='about-inner-image-border'></div>
+                        </a>
+                    </div>
             </div> 
         </div>
         <div class="skills" id="skills">
             <h1>
                 <strong class="primary">02.</strong> Habilidades
-                <div class="skills-container">
-                    <div class="skills-container-main">
-                        <i class="devicon-javascript-plain colored scale-hover "></i>
-                        <span>
-                        </span>
-                        <span>
-
-                            <i class="devicon-typescript-plain colored scale-hover"></i>
-                        </span>
-                        <span>
-                            
-                            <i class="devicon-vuejs-plain colored scale-hover"></i>
-                        </span>
-                        <span>
-                            
-                            <i class="devicon-nuxtjs-plain colored scale-hover"></i>
-                        </span>
-                        <span>
-                            
-                            <i class="devicon-html5-plain colored scale-hover"></i>
-                        </span>
-                        <span>
-                            
-                            <i class="devicon-css3-plain colored scale-hover"></i>
-                        </span>
-                        <span>
-                            
-                            <i class="devicon-sass-original colored scale-hover"></i>
-                        </span>
-                        <span>
-                            
-                            <i class="devicon-python-plain colored scale-hover"></i>
-                        </span>
-                        <span>
-                            
-                            <i class="devicon-php-plain colored scale-hover"></i>
-                        </span>
-                        <span>
-                            
-                            <i class="devicon-mysql-plain scale-hover"></i>
-                        </span>
-                        <span>
-                            <i class="devicon-express-original scale-hover"></i>                             
-                        </span>
-                    </div>                  
-                </div>
             </h1>
+                <div class="skills-container">
+                    <div class="skills-container-devicons">
+                       <p>Front</p>
+                       <div class="devicons">
+                            <i class="fa-brands fa-html5 icon" style="--color: #E54D26;"></i>
+                            <i class="fa-brands fa-css3-alt icon" style="--color: #3D8FC6;"></i>
+                            <i class="fa-brands fa-square-js icon" style="--color: #F0DB4F;"></i>
+                            <i class="fa-brands fa-sass icon" style="--color: #CB6699   ;"></i>
+                            <i class="fa-brands fa-vuejs icon" style="--color: #41B883;"></i>
+                            <i class="fa-brands fa-react icon" style="--color: #61DAFB;"></i>
+                        </div>
+                        <p>Back</p>
+                        <div class="devicons">
+                            <i class="fa-brands fa-node icon" style="--color: #83CD29;"></i>
+                            <i class="devicon-express-original icon icon-special" style="--color: black;"></i>
+                            <i class="devicon-mongodb-plain-wordmark icon icon-special" style="--color: #65D693;"></i>
+                            <i class="fa-brands fa-php icon" style="--color: #6181B6;"></i>
+                            <i class="fa-brands fa-laravel icon" style="--color: #FD4F31;"></i>
+                            <i class="devicon-mysql-plain icon icon-special" style="--color: #00618A;"></i>
+                            
+                         </div>
+                        <p>Web Server</p>
+                        <div class="devicons">
+                            <i class="devicon-apache-line icon icon-special" style="--color: red;"></i>
+                            <i class="devicon-nginx-original icon icon-special" style="--color: #009900;"></i>
+                         </div>
+                         <p>Languages</p>
+                         <div class="devicons">
+                            <i class="fa-brands fa-python icon" style="--color: #FFD845;"></i>
+                            <i class="devicon-c-plain icon icon-special" style="--color: #03599C;"></i>
+                            <i class="devicon-cplusplus-plain icon icon-special" style="--color: #9C033A;"></i>
+                            <i class="devicon-java-plain-wordmark icon icon-special" style="--color: #EA2D2E;"></i>
+                          </div>
+                    </div>
+                    <div class="skills-container-text">
+                        <div class="skills-container-center">
+                            <div class="skills-container-title">
+                                 * Click no ícone para ler a descrição*
+                            </div>
+                            <div class="skills-container-context">
+                            </div>
+                        </div>
+                    </div>
+                                      
+                </div>
         </div>
         <div class="projects" id="projects">
             <h1>                
                  <strong class="primary">03.</strong> Projetos
             </h1>
+            <div class="projects-container">
+                <div class="projects-item">
+
+                </div>
+                <div class="projects-item">
+
+                </div>
+                <div class="projects-item">
+
+                </div>
+            </div>
         </div>                  
     </div>
-    <script src="index.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 </html>
