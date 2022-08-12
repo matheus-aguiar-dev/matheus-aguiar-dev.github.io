@@ -249,11 +249,49 @@
   }
   .projects{
     text-align-last: center;
+    margin-bottom: $vertical-height;
     &-container{
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
     }
-    
+    .project-card{
+      margin: 30px 2%;
+      display: flex;
+      flex-direction: column;
+      color: $color-primary;      
+      text-transform: uppercase;
+    }
+    &-item{
+      height: 350px;
+      width: 260px;
+      background-image: url('https://images.unsplash.com/photo-1513738781020-f0109e72554f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTg4NDA1NDI&ixlib=rb-1.2.1&q=80&w=400');
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      border-bottom: $color-primary 6px solid;
+      border-radius: 10px 10px 10px 10px;
+      .know-more{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 30px;
+        background-color: #282A37;
+        clip-path: circle(50% at 50% 0);
+        overflow: hidden;
+      }
+    }
+    .project-title{
+      height: 60px;
+      background-color: #282A37;
+      padding-top: 8px;
+      margin-top: -5px;
+      border-radius: 0 0 10px 10px;
+
+    }
+  }
+  .contact{
+    text-align: center;
   }
 }
   @media only screen and (max-width: 1150px) {
