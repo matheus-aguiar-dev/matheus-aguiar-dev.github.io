@@ -253,6 +253,9 @@ nav {
 .fading {
   animation: fading .9s infinite; }
 
+a {
+  text-decoration: none; }
+
 .left-bar {
   position: fixed;
   left: 0;
@@ -277,7 +280,7 @@ nav {
 .right-bar {
   position: fixed;
   overflow: hidden;
-  font-family: monospace;
+  font-family: sans-serif;
   font-size: 1.1rem;
   right: 0;
   width: 100px;
@@ -324,6 +327,44 @@ nav {
     .main .greetings .text-writer {
       font-size: 30px;
       font-weight: 900; }
+    .main .greetings-button {
+      align-items: center;
+      margin-top: 20px;
+      appearance: none;
+      background-image: radial-gradient(100% 100% at 100% 0, #14FFEC, #5468ff 100%);
+      border: 0;
+      border-radius: 6px;
+      box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: inline-flex;
+      height: 48px;
+      justify-content: center;
+      list-style: none;
+      overflow: hidden;
+      padding-left: 16px;
+      padding-right: 16px;
+      position: relative;
+      text-align: left;
+      text-decoration: none;
+      transition: box-shadow .15s,transform .15s;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      white-space: nowrap;
+      will-change: box-shadow,transform;
+      font-size: 18px; }
+      .main .greetings-button p {
+        margin: 0 0 0 8px; }
+    .main .greetings-button:focus {
+      box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset; }
+    .main .greetings-button:hover {
+      box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+      transform: translateY(-2px); }
+    .main .greetings-button:active {
+      box-shadow: #3c4fe0 0 3px 7px inset;
+      transform: translateY(2px); }
   .main .emote-rotate {
     display: inline-block;
     animation: rotation 0.6s linear infinite; }
@@ -466,7 +507,12 @@ nav {
       margin-top: -5px;
       border-radius: 0 0 10px 10px; }
   .main .contact {
-    text-align: center; }
+    text-align: center;
+    padding: 0 20%; }
+    .main .contact-icon {
+      font-size: 40px; }
+    .main .contact a {
+      text-decoration: none; }
 
 @media only screen and (max-width: 1150px) {
   .main {
@@ -498,8 +544,25 @@ nav {
   .skills-container-devicons, .skills-container-text {
     width: 100% !important; }
   .skills-container-center {
-    position: relative !important; } }
+    position: relative !important; }
+  .contact {
+    text-align: center;
+    padding: 0 5% !important; } }
+
+footer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  height: 40px;
+  text-align: center; }
+  footer a {
+    transition: 2 ease; }
+  footer a:hover {
+    color: mediumaquamarine; }
 
 @media only screen and (max-width: 500px) {
   .about-inner-column-title::after {
-    width: 40% !important; } }
+    width: 40% !important; }
+  footer {
+    min-height: 80px; } }

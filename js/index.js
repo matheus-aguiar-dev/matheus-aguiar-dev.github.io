@@ -1,9 +1,9 @@
 let i = 0;
 let textPosition = 0;
 const txt = [
-  "Sou um Desenvolvedor FullStack",
-  "Machine Learning Entusiasta",
-  "Amo Scripts e Automação",
+  "Sou um Desenvolvedor FullStack.",
+  "Machine Learning Entusiasta.",
+  "Amo Scripts e Automação.",
 ];
 let speed = 120;
 let yOffset = -80;
