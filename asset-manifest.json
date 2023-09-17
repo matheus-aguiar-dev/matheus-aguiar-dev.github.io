@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.9033aff2.js",
+    "main.js": "/static/js/main.b85a9fca.js",
     "static/js/787.b1733114.chunk.js": "/static/js/787.b1733114.chunk.js",
     "static/media/avatar.webp": "/static/media/avatar.19dfcb08f205c1c4bbea.webp",
     "static/media/vlc-cam.png": "/static/media/vlc-cam.e358cfd3b36761d25519.png",
@@ -9,10 +9,10 @@
     "static/media/tablet.svg": "/static/media/tablet.97fe932b7b08017a14e468d5fb1f1425.svg",
     "static/media/smartphone.svg": "/static/media/smartphone.e18b1faa66785d8107b42c211ba595dc.svg",
     "index.html": "/index.html",
-    "main.9033aff2.js.map": "/static/js/main.9033aff2.js.map",
+    "main.b85a9fca.js.map": "/static/js/main.b85a9fca.js.map",
     "787.b1733114.chunk.js.map": "/static/js/787.b1733114.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.9033aff2.js"
+    "static/js/main.b85a9fca.js"
   ]
 }
