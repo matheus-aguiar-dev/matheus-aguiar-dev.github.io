@@ -2,6 +2,7 @@ import { getTheme } from "../components"
 import ownStore from "./media/own-store.png"
 import vlcCam from "./media/vlc-cam.png"
 import avatar from "./media/avatar.webp"
+import monitor from "./media/monitor.png"
 
 const { color } = getTheme()
 
@@ -33,6 +34,13 @@ export const projects: Year[] = [
     year: 2023,
     color: color.orange,
     projects: [
+       {
+        title: "[WIP]monitor-display-switcher",
+        description:
+          "A gnome-shell-extension that gives a modern way to change display",
+        image: monitor,
+        repoUrl: "https://github.com/matheus-aguiar-dev/gnome-shell-display-switcher",
+	    },
       {
         title: " vlc-cam",
         description:
