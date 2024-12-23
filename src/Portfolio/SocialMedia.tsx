@@ -12,25 +12,18 @@ export const SocialMedia = () => {
   return (
     <CardGroup>
       <Card
-      url={"https://github.com/matheus-aguiar-dev"}
+        url={"https://github.com/matheus-aguiar-dev"}
         icon={faGithub}
         color={color.dark}
       >
-      MatheusDev
+        MatheusDev
       </Card>
       <Card
         url={"https://www.linkedin.com/in/matheus-aguiar-dev/"}
         icon={faLinkedin}
         color={color.purple}
       >
-	MatheusDev
-      </Card>
-      <Card
-        url={"https://steamcommunity.com/id/Maah69/"}
-        icon={faSteam}
-        color={color.blue}
-      >
-        Kriza
+        MatheusDev
       </Card>
     </CardGroup>
   )

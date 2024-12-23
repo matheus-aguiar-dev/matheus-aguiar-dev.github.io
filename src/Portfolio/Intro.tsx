@@ -22,9 +22,10 @@ export const Intro = () => (
         text={`Hello, I'm Matheus \n`}
         textCarousel={[
           "I love Open Source",
-          "Linux's entusiast",
+          "Linux's entusiast & Developer",
+          "Android Developer",
         ]}
-        timing={{ typeStrokes: 100, deleteStrokes: 50, waiting: 2000 }}
+        timing={{ typeStrokes: 100, deleteStrokes: 50, waiting: 500 }}
       />
     </TyperContainer>
   </>

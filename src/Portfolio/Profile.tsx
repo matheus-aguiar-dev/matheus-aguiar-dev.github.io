@@ -80,7 +80,7 @@ const Text = styled.div`
     width: ${textWidth}px;
     color: ${color.light};
     font-size: ${space.md};
-    text-align: justify;
+    text-align: center;
     > p {
       margin: 0;
     }
@@ -117,23 +117,35 @@ export const Profile = () => (
         Brazilian | Portuguese and English
         <br />
         <K>Skills</K>
-	<br />
-	Desktop: GTK, QT and .NET
-	<br />
-	Web: LEMP stack		
-	<br />
-	Main languages: C, C++ and Python
+        <br />
+        <K>Mobile</K>: Android (Kotlin, Java)
+        <br />
+        <K>Backend</K>: Python, Java, PHP
+        <br />
+        <K>Web</K>: LEMP stack, JavaScript (Node.js)
+        <br />
+        <K>Automation</K>: Python (Scripting, Testing), Bash
+        <br />
+        <K>DevOps</K>: Git, Perforce, CI/CD pipelines
+        <br />
+        <K>Open Source</K>: Contributions to Linux (Debian packages, GNOME)
+        <br />
+        <K>Data</K>: SQL, Machine Learning (Python, OpenCV, MediaPipe)
       </Skills>
     </LeftColumn>
     <Text>
-      <h2>About Me</h2>
-      <p>
-      I am a 24 year old professional <K>Linux developer.</K> My work revolves around crafting custom Linux solutions for <K>OEMs</K>. My focus includes <K>hardware certification</K>,  development and maintenance of <K>embedded systems</K> and managing and packaging <K>Debian packages</K>.
-      <br/>
-      <br/>
-      I have a strong passion for <K>backend</K> development, <K>DevOps </K>and the <K>GNOME</K> project as general.	
-        <br />
-     </p>
+      I am a passionate <K>Android developer</K> and <K>software engineer</K> with a background in <K>open-source contributions</K>,
+      <K>automation</K>, and <K>software testing</K>. My professional experience includes developing <K>custom Linux solutions</K>
+      for <K>OEMs</K>, focusing on <K>hardware certification</K>, <K>embedded systems</K> development, and managing <K>Debian packages</K>.
+      <br />
+      <br />
+      Over time, I shifted my expertise towards <K>mobile development</K>, particularly in crafting <K>Android applications</K>,
+      while maintaining my passion for <K>backend development</K>, <K>DevOps</K>, and contributing to the <K>GNOME</K> project.
+      <br />
+      <br />
+      My work also integrates cutting-edge technologies such as <K>machine learning</K> and <K>real-time image processing</K> using
+      tools like <K>OpenCV</K> and <K>MediaPipe</K>, which I apply to both mobile and cross-platform solutions.
+      <br />
     </Text>
   </StyledProfile>
 )

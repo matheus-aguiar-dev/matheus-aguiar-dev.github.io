@@ -5,7 +5,6 @@ import {
   faTerminal,
   faAddressCard,
   faHashtag,
-  faPaintBrush,
 } from "@fortawesome/free-solid-svg-icons"
 
 import {
@@ -16,7 +15,6 @@ import {
 } from "../components"
 import logo from "../data/media/logo.webp"
 import { Intro } from "./Intro"
-import { Playground } from "./Playground/Playground"
 import { Profile } from "./Profile"
 import { Projects } from "./Projects/Projects"
 import { SocialMedia } from "./SocialMedia"
@@ -87,14 +85,8 @@ export const Portfolio = () => {
         </Section>
       </ScrollspyContent>
 
-      <ScrollspyContent icon={faPaintBrush} label={"playground"}>
-        <Section bgcolor={color.light}>
-          <Playground />
-        </Section>
-      </ScrollspyContent>
-
       <ScrollspyContent icon={faHashtag} label={"social"}>
-        <Section bgcolor={color.dark}>
+        <Section bgcolor={color.light}>
           <SocialMedia />
         </Section>
       </ScrollspyContent>
